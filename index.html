@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Academic homepage of Bingchen Pei, an undergraduate researcher working on natural language processing, retrieval-augmented generation, and user privacy and security in multimodal AI."
+    />
+    <meta name="theme-color" content="#f5f7fa" />
+
+    <title>Bingchen Pei · Research Homepage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/main.js" defer></script>
+  </head>
+
+  <body>
+    <aside class="sidebar">
+      <div class="profile">
+        <!-- To use a profile photo, replace the div below with:
+        <img class="avatar" src="./assets/images/avatar.jpg" alt="Bingchen Pei" />
+        -->
+        <img
+  class="avatar"
+  src="./assets/images/avatar.jpg"
+  alt="Bingchen Pei"
+/>
+        <h1>Bingchen Pei</h1>
+        <p class="profile-title">Undergraduate Researcher</p>
+        <p class="affiliation">Beijing Jiaotong University</p>
+
+        <div class="profile-links" aria-label="Academic profiles">
+          <a href="mailto:bingchenpei@gmail.com">Email</a>
+          <!-- Replace # with your full ORCID URL, for example https://orcid.org/0000-0000-0000-0000. -->
+          <a href="#" target="_blank" rel="noreferrer">ORCID</a>
+          <a href="https://github.com/peibingchen" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#about"><span>01</span>About</a>
+        <a class="nav-link" href="#research"><span>02</span>Research</a>
+        <a class="nav-link" href="#projects"><span>03</span>Projects</a>
+        <a class="nav-link" href="#honors"><span>04</span>Honors</a>
+        <a class="nav-link" href="#education"><span>05</span>Education</a>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme">
+        <span aria-hidden="true">☾</span>
+        <span class="theme-label">Dark mode</span>
+      </button>
+    </aside>
+
+    <main class="main-content">
+      <section class="content-section about-section" id="about">
+        <div class="section-kicker">Biography</div>
+        <h2>About Me</h2>
+
+        <div class="about-text">
+          <p>
+            I am an undergraduate researcher at
+            <strong>Beijing Jiaotong University</strong>. My interests lie in natural
+            language processing, retrieval-augmented generation, and user privacy and
+            security in multimodal AI systems.
+          </p>
+          <p>
+            I am currently exploring privacy and security risks that arise when users
+            interact with multimodal AI systems. I am also developing
+            <strong>Campus-Mind</strong>, an intelligent learning and campus-life assistant
+            for the Weihai Campus of Beijing Jiaotong University.
+          </p>
+        </div>
+
+        <dl class="research-summary">
+          <div>
+            <dt>Primary field</dt>
+            <dd>Natural Language Processing</dd>
+          </div>
+          <div>
+            <dt>Current project</dt>
+            <dd>User Privacy in Multimodal AI · Campus-Mind</dd>
+          </div>
+          <div>
+            <dt>Technical focus</dt>
+            <dd>LLM · Python · RAG · Neo4j </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="content-section" id="research">
+        <div class="section-kicker">Research Agenda</div>
+        <h2>Research Interests</h2>
+        <p class="section-intro">
+          I am interested in grounded language systems and the privacy and security
+          challenges users face when interacting with multimodal AI.
+        </p>
+
+        <div class="research-grid">
+          <article class="research-card">
+            <span>01</span>
+            <h3>Natural Language Processing</h3>
+            <p>Language understanding and LLM-based systems for educational applications.</p>
+          </article>
+          <article class="research-card">
+            <span>02</span>
+            <h3>Retrieval-Augmented Generation</h3>
+            <p>Reliable domain-specific question answering grounded in curated knowledge.</p>
+          </article>
+          <article class="research-card">
+            <span>03</span>
+            <h3>Multimodal Privacy & Security</h3>
+            <p>
+              User privacy and security in multimodal AI interactions, with a focus on
+              sensitive-data exposure, cross-modal leakage, and responsible data handling.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="projects">
+        <div class="section-kicker">Selected Work</div>
+        <h2>Project Experience</h2>
+
+        <article class="project-card">
+          <header class="project-header">
+            <div>
+              <p class="project-type">Research & Engineering Project</p>
+              <h3>Campus-Mind</h3>
+              <p class="project-subtitle">Intelligent Campus Learning and Life Assistant</p>
+            </div>
+            <time datetime="2026-01">Jan 2026 — Present</time>
+          </header>
+
+          <ul class="tech-stack" aria-label="Technologies used">
+            <li>LLM</li>
+            <li>RAG</li>
+            <li>Neo4j</li>
+            <li>React</li>
+            <li>Python</li>
+          </ul>
+
+          <p class="project-summary">
+            Campus-Mind is an intelligent assistant for the Weihai Campus of Beijing
+            Jiaotong University. It brings together campus information Q&A, personalized
+            academic analysis, English-learning support, project workspaces, and long-term
+            memory in a unified system.
+          </p>
+
+          <div class="project-details">
+            <div>
+              <h4>System Design</h4>
+              <p>
+                The system answers questions about study plans, academic records, course
+                schedules, and campus life. It uses student profile data to analyze program
+                requirements, academic progress, and course information, while maintaining
+                independent context for different learning and project tasks.
+              </p>
+            </div>
+            <div>
+              <h4>My Contributions</h4>
+              <ul>
+                <li>Designed the retrieval-augmented generation pipeline and Q&A chain.</li>
+                <li>
+                  Built domain knowledge bases from textbooks, course materials, campus
+                  policies, and university web content.
+                </li>
+                <li>
+                  Integrated Neo4j and GraphRAG to create a searchable, extensible, and
+                  explainable campus knowledge network.
+                </li>
+                <li>
+                  Developed data preprocessing, segmentation, indexing, retrieval, and
+                  reranking workflows.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-status">
+            <span>Status</span>
+            <p>
+              Internal beta testing is planned for summer 2026, with campus deployment
+              targeted for September 2026.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-section" id="honors">
+        <div class="section-kicker">Recognition</div>
+        <h2>Honors & Awards</h2>
+
+        <div class="honors-list">
+          <article class="honor-item">
+            <time>2026</time>
+            <div>
+              <h3>Third Prize</h3>
+              <p>8th Weihai Collegiate Programming Contest</p>
+            </div>
+          </article>
+          <article class="honor-item">
+            <time>2026</time>
+            <div>
+              <h3>Third Prize</h3>
+              <p>Beijing Jiaotong University Collegiate Programming Contest</p>
+            </div>
+          </article>
+          <article class="honor-item">
+            <time>2025</time>
+            <div>
+              <h3>Third Prize</h3>
+              <p>Beijing Jiaotong University Freshman Programming Contest</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="education">
+        <div class="section-kicker">Academic Background</div>
+        <h2>Education</h2>
+
+        <article class="timeline-item">
+          <div class="timeline-mark" aria-hidden="true">BJTU</div>
+          <div>
+            <h3>Beijing Jiaotong University</h3>
+            <p>Undergraduate Student · Weihai Campus</p>
+            <p class="timeline-detail">
+              Coursework and independent study in natural language processing, computer
+              vision, and software engineering.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <footer class="site-footer">
+        <p>© <span id="current-year">2026</span> Bingchen Pei</p>
+        <p>Research, learning, and thoughtful engineering.</p>
+      </footer>
+    </main>
+  </body>
+</html>
