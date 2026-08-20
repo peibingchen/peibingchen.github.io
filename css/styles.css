@@ -10,7 +10,7 @@
   --card: #ffffff;
   --soft: #edf3fb;
   --shadow: 0 8px 28px rgb(15 23 42 / 7%);
-  --sidebar-width: 288px;
+  --sidebar-width: 272px;
 }
 
 [data-theme="dark"] {
@@ -189,14 +189,14 @@ a {
 
 .main-content {
   width: calc(100% - var(--sidebar-width));
-  max-width: 1180px;
+  max-width: none;
   min-height: 100vh;
-  padding: 66px clamp(42px, 7vw, 96px) 30px;
+  padding: 66px clamp(36px, 4.5vw, 72px) 30px;
   margin-left: var(--sidebar-width);
 }
 
 .content-section {
-  max-width: 880px;
+  max-width: 1120px;
   padding-bottom: 56px;
   margin-bottom: 54px;
   border-bottom: 1px solid var(--line);
@@ -688,7 +688,7 @@ a {
 }
 
 .site-footer {
-  max-width: 880px;
+  max-width: 1120px;
   display: flex;
   justify-content: space-between;
   gap: 20px;
