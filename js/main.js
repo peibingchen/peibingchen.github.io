@@ -1,17 +1,17 @@
 const root = document.documentElement;
-const themeToggle = document.querySelector(".theme-toggle");
-const themeIcon = themeToggle?.querySelector("[aria-hidden='true']");
-const themeLabel = themeToggle?.querySelector(".theme-label");
-const savedTheme = localStorage.getItem("theme");
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+const themeToggle = document.querySelector("#theme-toggle");
+const themeGlyph = themeToggle?.querySelector(".theme-glyph");
+const themeText = themeToggle?.querySelector(".theme-text");
+const themeColor = document.querySelector('meta[name="theme-color"]');
 
 function applyTheme(theme) {
-  root.dataset.theme = theme;
-
   const isDark = theme === "dark";
 
-  if (themeIcon) themeIcon.textContent = isDark ? "☀" : "☾";
-  if (themeLabel) themeLabel.textContent = isDark ? "Light mode" : "Dark mode";
+  root.dataset.theme = theme;
+
+  if (themeGlyph) themeGlyph.textContent = isDark ? "☀" : "☾";
+  if (themeText) themeText.textContent = isDark ? "Light" : "Dark";
+  if (themeColor) themeColor.content = isDark ? "#111214" : "#f5f4f0";
   if (themeToggle) {
     themeToggle.setAttribute(
       "aria-label",
@@ -20,7 +20,7 @@ function applyTheme(theme) {
   }
 }
 
-applyTheme(savedTheme || (prefersDark ? "dark" : "light"));
+applyTheme(root.dataset.theme || "light");
 
 themeToggle?.addEventListener("click", () => {
   const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
@@ -30,32 +30,45 @@ themeToggle?.addEventListener("click", () => {
 });
 
 const navigationLinks = [...document.querySelectorAll(".nav-link")];
-const sections = [...document.querySelectorAll(".content-section")];
+const sections = [...document.querySelectorAll("main section[id]")];
+const topbar = document.querySelector(".topbar");
+let navigationUpdateQueued = false;
 
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const visibleEntry = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((first, second) => second.intersectionRatio - first.intersectionRatio)[0];
+function updateActiveNavigation() {
+  if (!sections.length) return;
 
-      if (!visibleEntry) return;
+  const activationLine = (topbar?.offsetHeight || 0) + window.innerHeight * 0.2;
+  let activeSection = sections[0];
 
-      navigationLinks.forEach((link) => {
-        link.classList.toggle(
-          "active",
-          link.getAttribute("href") === `#${visibleEntry.target.id}`,
-        );
-      });
-    },
-    { rootMargin: "-15% 0px -65%", threshold: [0, 0.25, 0.5] },
-  );
+  sections.forEach((section) => {
+    if (section.getBoundingClientRect().top <= activationLine) {
+      activeSection = section;
+    }
+  });
 
-  sections.forEach((section) => observer.observe(section));
+  if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+    activeSection = sections[sections.length - 1];
+  }
+
+  navigationLinks.forEach((link) => {
+    link.classList.toggle("active", link.hash === `#${activeSection.id}`);
+  });
+
+  navigationUpdateQueued = false;
 }
+
+function requestNavigationUpdate() {
+  if (navigationUpdateQueued) return;
+
+  navigationUpdateQueued = true;
+  window.requestAnimationFrame(updateActiveNavigation);
+}
+
+window.addEventListener("scroll", requestNavigationUpdate, { passive: true });
+window.addEventListener("resize", requestNavigationUpdate);
+window.addEventListener("hashchange", requestNavigationUpdate);
+updateActiveNavigation();
 
 const currentYear = document.querySelector("#current-year");
 
-if (currentYear) {
-  currentYear.textContent = new Date().getFullYear();
-}
+if (currentYear) currentYear.textContent = new Date().getFullYear();
