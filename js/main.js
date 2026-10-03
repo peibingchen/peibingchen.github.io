@@ -11,7 +11,7 @@ function applyTheme(theme) {
 
   if (themeGlyph) themeGlyph.textContent = isDark ? "☀" : "☾";
   if (themeText) themeText.textContent = isDark ? "Light" : "Dark";
-  if (themeColor) themeColor.content = isDark ? "#111214" : "#f5f4f0";
+  if (themeColor) themeColor.content = isDark ? "#15191e" : "#ffffff";
   if (themeToggle) {
     themeToggle.setAttribute(
       "aria-label",

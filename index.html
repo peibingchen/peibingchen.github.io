@@ -7,7 +7,7 @@
       name="description"
       content="Academic homepage of Bingchen Pei, an undergraduate student working on natural language processing, retrieval-augmented generation, and user privacy and security in multimodal AI."
     />
-    <meta name="theme-color" content="#f5f4f0" />
+    <meta name="theme-color" content="#ffffff" />
 
     <title>Bingchen Pei · Research Homepage</title>
 
@@ -25,14 +25,9 @@
       })();
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/styles.css?v=20260826-1" />
-    <script src="./js/main.js?v=20260821-1" defer></script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23234686'/%3E%3Ctext x='20' y='28' text-anchor='middle' font-family='Georgia,serif' font-size='25' fill='white'%3EB%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./css/styles.css?v=20261003-2" />
+    <script src="./js/main.js?v=20261003-1" defer></script>
   </head>
 
   <body>
@@ -44,7 +39,7 @@
 
         <nav class="site-nav" aria-label="Main navigation">
           <a class="nav-link active" href="#about"><span>01</span>About</a>
-          <a class="nav-link" href="#research"><span>02</span>Research</a>
+          <a class="nav-link" href="#publications"><span>02</span>Publications</a>
           <a class="nav-link" href="#projects"><span>03</span>Projects</a>
           <a class="nav-link" href="#honors"><span>04</span>Honors</a>
           <a class="nav-link" href="#education"><span>05</span>Education</a>
@@ -92,64 +87,57 @@
           <div class="hero-links" aria-label="Contact and profile links">
             <a class="primary-link" href="mailto:bingchenpei@gmail.com">Email me</a>
             <!-- Replace # with your full ORCID URL. -->
-            <a href="#" target="_blank" rel="noreferrer">ORCID ↗</a>
+            <a href="#" target="_blank" rel="noreferrer">ORCID</a>
             <a href="https://github.com/peibingchen" target="_blank" rel="noreferrer">
-              GitHub ↗
+              GitHub
             </a>
           </div>
         </div>
       </section>
 
-      <dl class="quick-facts" aria-label="Research summary">
-        <div>
-          <dt>Primary field</dt>
-          <dd>Natural Language Processing</dd>
-        </div>
-        <div>
-          <dt>Technical focus</dt>
-          <dd>LLM Agents · RAG · Neo4j · Python</dd>
-        </div>
-        <div>
-          <dt>Current project</dt>
-          <dd>Campus-Mind</dd>
-        </div>
-      </dl>
-
-      <section class="page-section" id="research">
+      <section class="page-section" id="publications">
         <header class="section-heading">
           <div>
             <span class="section-index">02</span>
-            <p class="section-label">Research agenda</p>
+            <p class="section-label">Research</p>
           </div>
           <div>
-            <h2>Research Interests</h2>
-            <p>
-              I am interested in LLM agents, grounded language systems, and the privacy and
-              security challenges users face when interacting with multimodal AI.
-            </p>
+            <h2>Publications</h2>
           </div>
         </header>
 
-        <div class="research-list">
-          <article class="research-item">
-            <span class="item-number">01</span>
-            <h3>Natural Language Processing</h3>
-            <p>Language understanding and LLM-based systems for educational applications.</p>
-          </article>
-          <article class="research-item">
-            <span class="item-number">02</span>
-            <h3>Retrieval-Augmented Generation</h3>
-            <p>Reliable domain-specific question answering grounded in curated knowledge.</p>
-          </article>
-          <article class="research-item">
-            <span class="item-number">03</span>
-            <h3>Multimodal Privacy & Security</h3>
-            <p>
-              User privacy and security in multimodal AI interactions, with a focus on
-              sensitive-data exposure, cross-modal leakage, and responsible data handling.
+        <article class="publication-entry">
+          <a class="publication-figure" href="./assets/images/recast-figures.pdf" target="_blank" rel="noopener noreferrer" aria-label="View the combined ReCast figures">
+            <img src="./assets/images/recast-preview.webp" width="1200" height="991" alt="ReCast teaser and overall pipeline, combined into one preview" loading="lazy" />
+          </a>
+          <div class="publication-copy">
+            <h3>
+              <a href="https://arxiv.org/abs/2610.01184" target="_blank" rel="noopener noreferrer">ReCast: Contract-Preserving Protection for Fixed-Interface Multimodal Reasoning</a>
+            </h3>
+            <p class="publication-authors">
+              <span class="author-name"><strong class="author-self">Bingchen Pei</strong><sup>†</sup></span>,
+              <span class="author-name">Lichong Chen<sup>†</sup></span>,
+              <span class="author-name">Bingxi Zhao<sup>†‡</sup></span>,
+              <span class="author-name">Ziang Wu<sup>†</sup></span>, Sirui Wang, Min Zhang,
+              Yanhao Chen, Qingxu Liu, Qiang Gao, Chang-Tien Lu,
+              <span class="author-name">Bo Gao<sup>*</sup></span>
             </p>
-          </article>
-        </div>
+            <p class="publication-meta">
+              <em>arXiv preprint, 2026</em>
+              <a href="https://arxiv.org/abs/2610.01184" target="_blank" rel="noopener noreferrer">Paper</a>
+              <a href="https://arxiv.org/pdf/2610.01184" target="_blank" rel="noopener noreferrer">PDF</a>
+            </p>
+            <p class="publication-notes">
+              <span><sup>†</sup> equal contribution</span>
+              <span><sup>‡</sup> project lead</span>
+              <span><sup>*</sup> corresponding author</span>
+            </p>
+            <p class="publication-summary">
+              Protecting private chart and speech inputs while preserving the task structure
+              and media interfaces required for remote multimodal reasoning.
+            </p>
+          </div>
+        </article>
       </section>
 
       <section class="page-section" id="projects">
