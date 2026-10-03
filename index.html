@@ -26,7 +26,7 @@
     </script>
 
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23234686'/%3E%3Ctext x='20' y='28' text-anchor='middle' font-family='Georgia,serif' font-size='25' fill='white'%3EB%3C/text%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./css/styles.css?v=20261003-2" />
+    <link rel="stylesheet" href="./css/styles.css?v=20261003-3" />
     <script src="./js/main.js?v=20261003-1" defer></script>
   </head>
 
@@ -95,8 +95,8 @@
         </div>
       </section>
 
-      <section class="page-section" id="publications">
-        <header class="section-heading">
+      <section class="page-section" id="publications" aria-describedby="publication-legend">
+        <header class="section-heading publications-heading">
           <div>
             <span class="section-index">02</span>
             <p class="section-label">Research</p>
@@ -104,8 +104,15 @@
           <div>
             <h2>Publications</h2>
           </div>
+          <p class="publication-legend" id="publication-legend">
+            <span><sup>†</sup> equal contribution</span>
+            <span><sup>‡</sup> project lead</span>
+            <span><sup>*</sup> corresponding author</span>
+          </p>
         </header>
 
+        <!-- Shared legend for every publication: † equal contribution, ‡ project lead,
+             * corresponding author. Use author-self to bold Bingchen Pei without an underline. -->
         <article class="publication-entry">
           <a class="publication-figure" href="./assets/images/recast-figures.pdf" target="_blank" rel="noopener noreferrer" aria-label="View the combined ReCast figures">
             <img src="./assets/images/recast-preview.webp" width="1200" height="991" alt="ReCast teaser and overall pipeline, combined into one preview" loading="lazy" />
@@ -126,11 +133,6 @@
               <em>arXiv preprint, 2026</em>
               <a href="https://arxiv.org/abs/2610.01184" target="_blank" rel="noopener noreferrer">Paper</a>
               <a href="https://arxiv.org/pdf/2610.01184" target="_blank" rel="noopener noreferrer">PDF</a>
-            </p>
-            <p class="publication-notes">
-              <span><sup>†</sup> equal contribution</span>
-              <span><sup>‡</sup> project lead</span>
-              <span><sup>*</sup> corresponding author</span>
             </p>
             <p class="publication-summary">
               Protecting private chart and speech inputs while preserving the task structure
