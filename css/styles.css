@@ -476,9 +476,13 @@ h3 {
 }
 
 .author-self {
-  color: inherit;
+  color: #111111;
   font-weight: 700;
   text-decoration: none;
+}
+
+[data-theme="dark"] .author-self {
+  color: #ffffff;
 }
 
 .author-name {
