@@ -26,7 +26,16 @@
     </script>
 
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23234686'/%3E%3Ctext x='20' y='28' text-anchor='middle' font-family='Georgia,serif' font-size='25' fill='white'%3EB%3C/text%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./css/styles.css?v=20261004-2" />
+    <!-- Web fonts load without blocking rendering; system serif fonts are used until they arrive. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link rel="stylesheet" href="./css/styles.css?v=20261103-1" />
     <script src="./js/main.js?v=20261003-1" defer></script>
   </head>
 
@@ -35,14 +44,14 @@
 
     <header class="topbar">
       <div class="topbar-inner page-width">
-        <a class="wordmark" href="#about">Bingchen<span>/</span></a>
+        <a class="wordmark" href="#about">Bingchen Pei</a>
 
         <nav class="site-nav" aria-label="Main navigation">
-          <a class="nav-link active" href="#about"><span>01</span>About</a>
-          <a class="nav-link" href="#publications"><span>02</span>Publications</a>
-          <a class="nav-link" href="#projects"><span>03</span>Projects</a>
-          <a class="nav-link" href="#honors"><span>04</span>Honors</a>
-          <a class="nav-link" href="#education"><span>05</span>Education</a>
+          <a class="nav-link active" href="#about">About</a>
+          <a class="nav-link" href="#publications">Publications</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#honors">Honors</a>
+          <a class="nav-link" href="#education">Education</a>
         </nav>
 
         <button class="theme-toggle" id="theme-toggle" type="button">
@@ -52,23 +61,53 @@
       </div>
     </header>
 
-    <main class="page-width" id="main-content">
-      <section class="hero" id="about">
-        <figure class="portrait-card">
-          <img src="./assets/images/avatar.jpg" alt="Bingchen Pei" />
-          <figcaption>
-            <span class="status-dot" aria-hidden="true"></span>
-            <div>
-              <strong>Current Research</strong>
-              <p>Privacy-Preserving Multimodal AI</p>
-            </div>
-          </figcaption>
-        </figure>
+    <div class="layout page-width">
+      <aside class="profile" aria-label="Profile">
+        <img class="profile-photo" src="./assets/images/avatar.jpg" alt="Bingchen Pei" />
 
-        <div class="hero-copy">
+        <div class="profile-id">
           <h1>Bingchen Pei</h1>
-          <h2 class="about-title">About Me</h2>
-          <div class="hero-lead">
+          <p class="profile-role">Undergraduate Student</p>
+          <p class="profile-affiliation">Beijing Jiaotong University</p>
+        </div>
+
+        <div class="profile-focus">
+          <span class="status-dot" aria-hidden="true"></span>
+          <div>
+            <strong>Current Research</strong>
+            <p>Privacy-Preserving Multimodal AI</p>
+          </div>
+        </div>
+
+        <ul class="profile-links" aria-label="Contact and profile links">
+          <li>
+            <a href="mailto:bingchenpei@bjtu.edu.cn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5h17v13h-17z M3.5 6l8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+              Email me
+            </a>
+          </li>
+          <li>
+            <!-- Replace # with your full ORCID URL. -->
+            <a href="#" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6" /><path d="M8.6 10.2v6.2 M8.6 7.6v.1 M11.6 10.2v6.2h1.9a3.1 3.1 0 0 0 0-6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg>
+              ORCID
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/peibingchen" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.01 8.01 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82a7.6 7.6 0 0 0-4 0c-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A8 8 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="content" id="main-content">
+        <section class="page-section" id="about">
+          <header class="section-heading">
+            <h2>About Me</h2>
+          </header>
+          <div class="about-text">
             <p>
               Welcome! I am a second-year undergraduate student at
               <strong>Beijing Jiaotong University</strong>. My research interests span
@@ -76,120 +115,92 @@
               and trustworthy multimodal AI, with a particular focus on privacy and security.
             </p>
             <p>
-            I am currently working on <strong>privacy in multimodal AI systems</strong>,
-            with a focus on privacy-preserving multimodal interaction and reasoning.
-            I am also exploring <strong>AI for Software Engineering (AI4SE)</strong> and
-            <strong>LLM Agents &amp; Multi-Agent Collaboration</strong>.
+              I am currently working on <strong>privacy in multimodal AI systems</strong>,
+              with a focus on privacy-preserving multimodal interaction and reasoning.
+              I am also exploring <strong>AI for Software Engineering (AI4SE)</strong> and
+              <strong>LLM Agents &amp; Multi-Agent Collaboration</strong>.
             </p>
           </div>
+        </section>
 
-          <div class="hero-links" aria-label="Contact and profile links">
-            <a class="primary-link" href="mailto:bingchenpei@bjtu.edu.cn">Email me</a>
-            <!-- Replace # with your full ORCID URL. -->
-            <a href="#" target="_blank" rel="noreferrer">ORCID</a>
-            <a href="https://github.com/peibingchen" target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="page-section" id="publications" aria-describedby="publication-legend">
-        <header class="section-heading publications-heading">
-          <div>
-            <span class="section-index">02</span>
-            <p class="section-label">Research</p>
-          </div>
-          <div>
+        <section class="page-section" id="publications" aria-describedby="publication-legend">
+          <header class="section-heading">
             <h2>Publications</h2>
-          </div>
+            <p class="section-label">Research</p>
+          </header>
           <p class="publication-legend" id="publication-legend">
             <span><sup>†</sup> equal contribution</span>
             <span><sup>‡</sup> project lead</span>
             <span><sup>*</sup> corresponding author</span>
           </p>
-        </header>
 
-        <!-- Shared legend for every publication: † equal contribution, ‡ project lead,
-             * corresponding author. Use author-self to bold Bingchen Pei without an underline. -->
-        <article class="publication-entry">
-          <a class="publication-figure" href="./assets/images/recast-figures.pdf" target="_blank" rel="noopener noreferrer" aria-label="View the combined ReCast figures">
-            <img src="./assets/images/recast-preview.webp" width="1200" height="991" alt="ReCast teaser and overall pipeline, combined into one preview" loading="lazy" />
-          </a>
-          <div class="publication-copy">
-            <h3>
-              <a href="https://arxiv.org/abs/2610.01184" target="_blank" rel="noopener noreferrer">ReCast: Contract-Preserving Protection for Fixed-Interface Multimodal Reasoning</a>
-            </h3>
-            <p class="publication-authors">
-              <span class="author-name"><strong class="author-self">Bingchen Pei</strong><sup>†</sup></span>,
-              <span class="author-name">Lichong Chen<sup>†</sup></span>,
-              <span class="author-name">Bingxi Zhao<sup>†‡</sup></span>,
-              <span class="author-name">Ziang Wu<sup>†</sup></span>, Sirui Wang, Min Zhang,
-              Yanhao Chen, Qingxu Liu, Qiang Gao, Chang-Tien Lu,
-              <span class="author-name">Bo Gao<sup>*</sup></span>
-            </p>
-            <p class="publication-meta">
-              <em>Under review</em>
-              <a href="https://arxiv.org/abs/2610.01184" target="_blank" rel="noopener noreferrer">Paper</a>
-              <a href="https://arxiv.org/pdf/2610.01184" target="_blank" rel="noopener noreferrer">PDF</a>
-            </p>
-            <p class="publication-summary">
-              Protecting private image, audio, and text inputs while preserving task structure and 
-              modality-specific interfaces for remote multimodal reasoning.
-            </p>
-          </div>
-        </article>
-      </section>
-
-      <section class="page-section" id="projects">
-        <header class="section-heading">
-          <div>
-            <span class="section-index">03</span>
-            <p class="section-label">Selected work</p>
-          </div>
-          <div>
-            <h2>Project Experience</h2>
-          </div>
-        </header>
-
-        <article class="featured-project">
-          <header class="project-heading">
-            <div>
-              <p class="project-kicker">Research & Engineering</p>
-              <h3>Campus-Mind</h3>
-              <p>Intelligent Campus Learning and Life Assistant</p>
+          <!-- Shared legend for every publication: † equal contribution, ‡ project lead,
+               * corresponding author. Use author-self to bold Bingchen Pei without an underline. -->
+          <article class="publication-entry">
+            <a class="publication-figure" href="./assets/images/recast-figures.pdf" target="_blank" rel="noopener noreferrer" aria-label="View the combined ReCast figures">
+              <img src="./assets/images/recast-preview.webp" width="1200" height="991" alt="ReCast teaser and overall pipeline, combined into one preview" loading="lazy" />
+            </a>
+            <div class="publication-copy">
+              <h3>
+                <a href="https://arxiv.org/abs/2610.01184" target="_blank" rel="noopener noreferrer">ReCast: Contract-Preserving Protection for Fixed-Interface Multimodal Reasoning</a>
+              </h3>
+              <p class="publication-authors">
+                <span class="author-name"><strong class="author-self">Bingchen Pei</strong><sup>†</sup></span>,
+                <span class="author-name">Lichong Chen<sup>†</sup></span>,
+                <span class="author-name">Bingxi Zhao<sup>†‡</sup></span>,
+                <span class="author-name">Ziang Wu<sup>†</sup></span>, Sirui Wang, Min Zhang,
+                Yanhao Chen, Qingxu Liu, Qiang Gao, Chang-Tien Lu,
+                <span class="author-name">Bo Gao<sup>*</sup></span>
+              </p>
+              <p class="publication-meta">
+                <em class="venue">Under review</em>
+                <a class="pub-button" href="https://arxiv.org/abs/2610.01184" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a class="pub-button" href="https://arxiv.org/pdf/2610.01184" target="_blank" rel="noopener noreferrer">PDF</a>
+              </p>
+              <p class="publication-summary">
+                Protecting private image, audio, and text inputs while preserving task structure and
+                modality-specific interfaces for remote multimodal reasoning.
+              </p>
             </div>
-            <time datetime="2026-01">Jan 2026 — Present</time>
+          </article>
+        </section>
+
+        <section class="page-section" id="projects">
+          <header class="section-heading">
+            <h2>Project Experience</h2>
+            <p class="section-label">Selected work</p>
           </header>
 
-          <ul class="tech-list" aria-label="Technologies used">
-            <li>LLM</li>
-            <li>RAG</li>
-            <li>Neo4j</li>
-            <li>React</li>
-            <li>Python</li>
-          </ul>
+          <article class="featured-project">
+            <header class="project-heading">
+              <div>
+                <p class="project-kicker">Research &amp; Engineering</p>
+                <h3>Campus-Mind</h3>
+                <p class="project-subtitle">Intelligent Campus Learning and Life Assistant</p>
+              </div>
+              <time datetime="2026-01">Jan 2026 — Present</time>
+            </header>
 
-          <div class="project-body">
+            <ul class="tech-list" aria-label="Technologies used">
+              <li>LLM</li>
+              <li>RAG</li>
+              <li>Neo4j</li>
+              <li>React</li>
+              <li>Python</li>
+            </ul>
+
             <div class="project-overview">
               <p>
                 Campus-Mind is an intelligent assistant for the Beijing Jiaotong University.
-                It brings together campus information Q&A, personalized academic analysis,
+                It brings together campus information Q&amp;A, personalized academic analysis,
                 English-learning support, project workspaces, and long-term memory in one system.
               </p>
-              <div class="project-status">
-                <span>Status</span>
-                <p>
-                  Internal beta testing is planned for summer 2026, with campus deployment
-                  targeted for September 2026.
-                </p>
-              </div>
             </div>
 
             <div class="contributions">
               <h4>Selected contributions</h4>
-              <ol>
-                <li>Designed the retrieval-augmented generation pipeline and Q&A chain.</li>
+              <ul>
+                <li>Designed the retrieval-augmented generation pipeline and Q&amp;A chain.</li>
                 <li>
                   Built domain knowledge bases from textbooks, course materials, campus
                   policies, and university web content.
@@ -202,63 +213,61 @@
                   Developed preprocessing, segmentation, indexing, retrieval, and
                   reranking workflows.
                 </li>
-              </ol>
+              </ul>
             </div>
-          </div>
-        </article>
-      </section>
 
-      <section class="page-section" id="honors">
-        <header class="section-heading">
-          <div>
-            <span class="section-index">04</span>
+            <div class="project-status">
+              <span>Status</span>
+              <p>
+                Internal beta testing is planned for summer 2026, with campus deployment
+                targeted for September 2026.
+              </p>
+            </div>
+          </article>
+        </section>
+
+        <section class="page-section" id="honors">
+          <header class="section-heading">
+            <h2>Honors &amp; Awards</h2>
             <p class="section-label">Recognition</p>
-          </div>
-          <div>
-            <h2>Honors & Awards</h2>
-          </div>
-        </header>
+          </header>
 
-        <ol class="awards-list">
-          <li>
-            <time>2026</time>
-            <strong>Third Prize</strong>
-            <span>Beijing Jiaotong University Collegiate Programming Contest</span>
-          </li>
-          <li>
-            <time>2025</time>
-            <strong>Third Prize</strong>
-            <span>Beijing Jiaotong University Freshman Programming Contest</span>
-          </li>
-        </ol>
-      </section>
+          <ol class="awards-list">
+            <li>
+              <time>2026</time>
+              <p><strong>Third Prize</strong>, Beijing Jiaotong University Collegiate Programming Contest</p>
+            </li>
+            <li>
+              <time>2025</time>
+              <p><strong>Third Prize</strong>, Beijing Jiaotong University Freshman Programming Contest</p>
+            </li>
+          </ol>
+        </section>
 
-      <section class="page-section" id="education">
-        <header class="section-heading">
-          <div>
-            <span class="section-index">05</span>
-            <p class="section-label">Background</p>
-          </div>
-          <div>
+        <section class="page-section" id="education">
+          <header class="section-heading">
             <h2>Education</h2>
-          </div>
-        </header>
+            <p class="section-label">Background</p>
+          </header>
 
-        <article class="education-entry">
-          <div class="institution-mark">
-            <img src="./assets/images/bjtu-logo.png" alt="Beijing Jiaotong University logo" />
-          </div>
-          <div>
-            <p class="education-type">Undergraduate</p>
-            <h3>Beijing Jiaotong University</h3>
-            <p>2025 — Present</p>
-          </div>
-          <p class="education-detail">
-            B.S. in Computer Science and Technology · Expected 2029
-          </p>
-        </article>
-      </section>
-    </main>
+          <article class="education-entry">
+            <div class="institution-mark">
+              <img src="./assets/images/bjtu-logo.png" alt="Beijing Jiaotong University logo" />
+            </div>
+            <div class="education-copy">
+              <div class="education-line">
+                <h3>Beijing Jiaotong University</h3>
+                <time>2025 — Present</time>
+              </div>
+              <p class="education-type">Undergraduate</p>
+              <p class="education-detail">
+                B.S. in Computer Science and Technology · Expected 2029
+              </p>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
 
     <footer class="site-footer">
       <div class="page-width">
